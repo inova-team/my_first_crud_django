@@ -1,0 +1,62 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{#      AQUI COLOCO MIS CSS        #}
+{% block extrastyles %}
+{% endblock %}
+
+
+
+{#      AQUI COLOCO MIS CSS        #}
+{% block body %}
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card text-white bg-soft-danger">
+            <div class="card-body">
+              <div class="card-title"> VIDEO JUEGOS - EDIT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div class="row">
+    <div class="col-12">
+      <form action="{% url 'edit_vj' pk=videojuego_actual.pk %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">NOMBRE</label>
+          <input type="text" class="form-control" id="nombre" aria-describedby="nombre" name="nombre_name" value="{{ videojuego_actual.nombre }}">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">FECHA LANZAMIENTO</label>
+          <input type="date" class="form-control" id="fecha" aria-describedby="fecha" name="fecha_name" value="{{ videojuego_actual.fecha_lanzamiento|date:"Y-m-d" }}">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">TIPO</label>
+          <select class="form-control" id="exampleFormControlSelect1" name="tipo_name" >
+            {% for tipo in tipos %}
+               <option value="{{ tipo.pk }}" {% if tipo.pk == videojuego_actual.tipo.pk %} selected {% endif %}>{{ tipo.nombre }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}
+
+
+{#      AQUI COLOCO MIS JQUERY        #}
+{% block extrajs %}
+{% endblock %}
