@@ -1,0 +1,42 @@
+
+{% load static %}
+{#{% load has_group %}#}
+<nav class="navbar navbar-vertical navbar-expand-xl navbar-light pb-2">
+  {#    <div class="d-flex align-items-center" style="padding: 16px; height: 75px">#}
+  <div class="d-flex align-items-center pb-2" style="padding: 10px; height: 75px">
+    <div class="toggle-icon-wrapper">
+      <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-toggle="tooltip"
+              data-placement="left" title="Opciones">
+        <span class="navbar-toggle-icon"><span class="toggle-line"></span></span>
+      </button>
+    </div>
+    {#        <a class="navbar-brand" href="/">#}
+    {#            <div class="d-flex align-items-center py-3"><img class="mr-2"#}
+    {#                                                             src="{% static '/img/tinkku-img/logotipo-color.png' %}"#}
+    {#                                                             alt="" width="120"/></div>#}
+    {#        </a>#}
+    <a class="navbar-brand">
+      <img src="{% static '/img/logos/adidas.png' %}" style="width: 100px;"/>
+    </a>
+  </div>
+  <hr style="">
+  <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+    <div class="navbar-vertical-content perfect-scrollbar scrollbar">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link {% if  'register' in request.path and 'crm' not in request.path %}active{% endif %}"
+               href="">
+              <div class="d-flex align-items-center">
+                <span class="nav-link-icon"><span class="fas fa-users"></span></span><span
+                  class="nav-link-text">Registro</span>
+              </div>
+            </a>
+          </li>
+
+          <div class="navbar-vertical-divider">
+            <hr class="navbar-vertical-hr my-2">
+          </div>
+      </ul>
+    </div>
+  </div>
+</nav>

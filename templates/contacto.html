@@ -1,16 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>Hola Soy Contacto</p>
+
+{% extends 'base/base.html' %}
+
+{#      AQUI COLOCO MIS CSS        #}
+{% block extrastyles %}
+      <style>
+      p {
+          background-color: #4f131e;
+      }
+      </style>
+{% endblock %}
+
+
+
+{#      AQUI COLOCO MIS CSS        #}
+{% block body %}
+      <p>Hola Soy Contacto</p>
 <br>
 <p>Iniciaste sesión como {{ user }}</p>
 <a href="{% url 'home' %}"> Ir a Home</a>
-</body>
+{% endblock %}
+
+
+
+
+{#      AQUI COLOCO MIS JQUERY        #}
+{% block extrajs %}
 <script>
     console.log('{{ user.username }}')
 </script>
-</html>
+{% endblock %}

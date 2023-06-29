@@ -1,0 +1,43 @@
+{% load static %}
+
+<!-- ===============================================-->
+<!--    Stylesheets-->
+<!-- ===============================================-->
+
+<script src="{% static 'js/config.navbar-vertical.js' %}"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="{% static 'lib/perfect-scrollbar/perfect-scrollbar.css' %}" rel="stylesheet">
+<link href="{% static 'lib/select2/select2.min.css' %}" rel="stylesheet">
+<link href="{% static 'lib/flatpickr/flatpickr.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'lib/datatables-1.10.20/css/dataTables.bootstrap4.min.css' %}"/>
+<link rel="stylesheet" href="{% static 'lib/datatables-1.10.20/plugins/responsive-2.2.3/css/responsive.bootstrap4.min.css' %}"/>
+<link href="{% static 'lib/leaflet/leaflet.css' %}" rel="stylesheet">
+<link href="{% static 'lib/leaflet.markercluster/MarkerCluster.css' %}" rel="stylesheet">
+<link href="{% static 'lib/leaflet.markercluster/MarkerCluster.Default.css' %}" rel="stylesheet">
+<link href="{% static 'css/theme-dark.css' %}" rel="stylesheet">
+<link href="{% static 'project/base-custom.css' %}" rel="stylesheet"/>
+<style>
+  .table-responsive {
+    position: relative;
+  }
+
+  div.dataTables_wrapper div.dataTables_processing {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+    padding: 1em 0;
+    background-color: #0e1c2fb3 !important;
+  }
+
+  .select2-dropdown,.select2-search__field {
+    color: #d8e2ef;
+    background-color: #0e1c2f;
+  }
+
+
+</style>
