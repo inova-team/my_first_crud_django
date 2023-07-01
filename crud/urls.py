@@ -6,6 +6,7 @@ from crud import views
 #
 # from clientes import views, views_actores, institution_views
 
+
 urlpatterns = [
     # path('ruta/', backend, identificador)
     path('listar_videojuegos/', views.listar_videojuegos, name='listar_vj'),
@@ -13,7 +14,6 @@ urlpatterns = [
     path('editar_videojuego/<pk>', views.editar_videojuego, name='edit_vj'),
     path('eliminar_videojuego_logico/<pk>', views.eliminar_videojuego_logico, name='eliminar_vj_logico'),
     path('eliminar_videojuego_fisico/<pk>', views.eliminar_videojuego_fisico, name='eliminar_vj_fisico'),
-    path('contacto/', views.contacto, name='contacto')
 ]
 
 # actorespatterns = [

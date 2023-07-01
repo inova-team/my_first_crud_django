@@ -3,16 +3,6 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from crud.models import Videojuego, Tipo
 
-
-def contacto(request):
-    user = request.user
-    print(user)
-    context = {
-    "mensaje": 'Contacto',
-    "user": user
-    }
-    return render(request, 'contacto.html', context)
-
 def listar_videojuegos(request):
 
     videojuegos = Videojuego.objects.filter(estado=1)
