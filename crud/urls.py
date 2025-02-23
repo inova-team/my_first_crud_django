@@ -9,7 +9,7 @@ from crud import views
 
 urlpatterns = [
     # path('ruta/', backend, identificador)
-    path('listar_videojuegos/', views.listar_videojuegos, name='listar_vj'),
+    path('', views.listar_videojuegos, name='listar_vj'),
     path('crear_videojuego/', views.crear_videojuego, name='crear_vj'),
     path('editar_videojuego/<pk>', views.editar_videojuego, name='edit_vj'),
     path('eliminar_videojuego_logico/<pk>', views.eliminar_videojuego_logico, name='eliminar_vj_logico'),
