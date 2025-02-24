@@ -9,11 +9,8 @@ from crud import views
 
 urlpatterns = [
     # path('ruta/', backend, identificador)
-    path('', views.listar_videojuegos, name='listar_vj'),
-    path('crear_videojuego/', views.crear_videojuego, name='crear_vj'),
-    path('editar_videojuego/<pk>', views.editar_videojuego, name='edit_vj'),
-    path('eliminar_videojuego_logico/<pk>', views.eliminar_videojuego_logico, name='eliminar_vj_logico'),
-    path('eliminar_videojuego_fisico/<pk>', views.eliminar_videojuego_fisico, name='eliminar_vj_fisico'),
+    path('', views.signin, name='signin'),
+    path('pos/', views.posview,name='posview'),
 ]
 
 # actorespatterns = [

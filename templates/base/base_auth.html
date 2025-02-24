@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  {% block head %}
+    {% include 'base/head.html' %}
+  {% endblock %}
+
+</head>
+
+<body class="">
+
+  
+  <main class="main-content  mt-0">
+
+    {% block body %}
+    {% endblock %}
+
+  </main>
+
+    {% block js %}
+      {% include 'base/js.html' %}
+    {% endblock %}
+
+</body>
+
+</html>
